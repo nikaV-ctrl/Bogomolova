@@ -9,6 +9,9 @@
     <string name="favorite_title">Избранное</string>
     <string name="name">Изгой-один: Звёздные...</string>
     <string name="type">Фантастика (2016)</string>
+    <string name="textLostConnection">Произошла ошибка при загрузке данных, проверьте подключение к сети</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Strings related to login -->

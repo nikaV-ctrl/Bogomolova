@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_mainFragmentNav_to_lostConnectionFragment"
             app:destination="@id/lostConnectionFragment" />
+        <action
+            android:id="@+id/action_mainFragmentNav_to_singleMovie"
+            app:destination="@id/singleMovie" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -70,4 +73,9 @@
             android:id="@+id/action_lostConnectionFragment_to_mainFragmentNav"
             app:destination="@id/mainFragmentNav" />
     </fragment>
+    <activity
+        android:id="@+id/singleMovie"
+        android:name="com.example.movieapptinkoff.screens.detail.SingleMovie"
+        android:label="activity_single_movie"
+        tools:layout="@layout/activity_single_movie" />
 </navigation>

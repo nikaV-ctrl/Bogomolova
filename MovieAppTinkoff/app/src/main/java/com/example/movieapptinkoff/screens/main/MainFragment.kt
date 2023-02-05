@@ -1,22 +1,28 @@
 package com.example.movieapptinkoff.screens.main
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapptinkoff.MAIN
 import com.example.movieapptinkoff.R
-import com.example.movieapptinkoff.models.Film
 import com.example.movieapptinkoff.databinding.FragmentMainBinding
+import com.example.movieapptinkoff.models.Film
+import com.example.movieapptinkoff.models.Genre
+import java.io.Serializable
 
 class MainFragment : Fragment() {
 
-    private var mBinding: FragmentMainBinding ?= null
+    private var mBinding: FragmentMainBinding?= null
     private val binding get() = mBinding!!
     lateinit var movieList: RecyclerView
     private val adapter by lazy { MainAdapter() }
@@ -46,12 +52,6 @@ class MainFragment : Fragment() {
     @SuppressLint("FragmentLiveDataObserve")
     private fun init() {
 
-//        relativeLayoutFavorite.setOnClickListener{
-////            MAIN?.navController?.navigate(R.id.action_mainFragment2_to_favoriteFragment)
-//
-//            MAIN.navController.navigate(R.id.favoriteFragment)
-//        }
-
         try{
             val viewModel = ViewModelProvider(this)[MainFragmentViewModel::class.java]
             movieList = binding.movieList
@@ -75,10 +75,17 @@ class MainFragment : Fragment() {
 
         fun clickMovie(model: Film){
             val bundle = Bundle()
-            bundle.putSerializable("movie", model)
-//            MAIN.navController.navigate(R.id.action_mainFragment2_to_detailFragment, bundle)
+            lateinit var modelGenre: Genre
+//            bundle.putSerializable("movie", model as Serializable)
+            bundle.putInt("filmId", model.filmId)
+            bundle.putString("posterUrl", model.posterUrl)
+            bundle.putString("nameRu", model.nameRu)
+            bundle.putString("genres", modelGenre.genre)
 
-            MAIN.navController.navigate(R.id.action_mainFragmentNav_to_singleMovieFragment, bundle)
+            bundle.putString("countries", model.countries.toString())
+            bundle.putString("year", model.year)
+
+            MAIN.navController.navigate(R.id.action_mainFragment2_to_detailFragment, bundle)
         }
     }
 

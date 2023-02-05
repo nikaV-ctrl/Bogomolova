@@ -8,12 +8,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:id="@+id/some_id"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/some_id"
             android:clipToOutline="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,8 +35,8 @@
                 android:layout_height="533dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="-1dp"
-                android:layout_marginTop="-24dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
                 android:background="@drawable/banner" />
 
             <TextView
@@ -44,15 +44,14 @@
                 android:layout_width="289dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="31dp"
-                android:layout_marginTop="540dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/roboto_bold"
                 android:gravity="top"
                 android:includeFontPadding="false"
-                android:lineSpacingExtra="-7sp"
                 android:text="@string/title"
                 android:textAppearance="@style/title"
+                android:layout_below="@id/banner"
                 app:lineHeight="18sp" />
 
             <TextView
@@ -60,9 +59,9 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginLeft="32dp"
-                android:layout_marginTop="585dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/name"
                 android:gravity="top"
                 android:lineSpacingExtra="0sp"
                 android:text="@string/description"
@@ -73,9 +72,9 @@
                 android:layout_width="229dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginLeft="31dp"
-                android:layout_marginTop="692dp"
+                android:layout_below="@+id/description"
+                android:layout_marginTop="20dp"
                 android:gravity="top"
                 android:lineSpacingExtra="0sp"
                 android:text="@string/genres"
@@ -86,9 +85,9 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginLeft="31dp"
-                android:layout_marginTop="716dp"
+                android:layout_below="@+id/genres"
+                android:layout_marginTop="20dp"
                 android:gravity="top"
                 android:lineSpacingExtra="0sp"
                 android:text="@string/countries"
@@ -99,9 +98,9 @@
                 android:layout_width="62dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginLeft="31dp"
-                android:layout_marginTop="740dp"
+                android:layout_below="@+id/countries"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/roboto"
                 android:gravity="top"
                 android:lineSpacingExtra="0sp"

@@ -6,12 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapptinkoff.R
 import com.example.movieapptinkoff.models.Film
+import com.example.movieapptinkoff.models.Genre
 import kotlinx.android.synthetic.main.item.view.*
 import com.squareup.picasso.Picasso
 
 class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
 
     private var listMovies = emptyList<Film>()
+    private var listGenres = emptyList<Genre>()
 
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view)
 
@@ -39,6 +41,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
 
     fun setList(list: List<Film>){
         listMovies = list
+//        listGenres = listTwo
 
         notifyDataSetChanged()
     }
@@ -47,6 +50,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
         super.onViewAttachedToWindow(holder)
         holder.itemView.setOnClickListener{
             MainFragment.clickMovie(listMovies[holder.adapterPosition])
+//            MainFragment.clickMovie(listGenres[holder.adapterPosition])
         }
     }
 

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
 import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         val isConnected: Boolean = activeNetwork?.isConnectedOrConnecting == true
 
         if(!isConnected){
+            Toast.makeText(this, "Произошла ошибка при загрузке данных, проверьте подключение к сети", Toast.LENGTH_LONG).show()
             MAIN.navController.navigate(R.id.action_mainFragmentNav_to_lostConnectionFragment)
         }
 
