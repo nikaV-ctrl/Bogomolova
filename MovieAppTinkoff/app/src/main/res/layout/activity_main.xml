@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph"
+        />
+
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/frameLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="676dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/relativeLayoutTop"-->
+<!--        android:layout_width="158dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        >-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btnTop"-->
+<!--            android:layout_width="158dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/light_blue" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textTop"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="14dp"-->
+<!--            android:layout_alignStart="@+id/btnTop"-->
+<!--            android:layout_alignTop="@+id/btnTop"-->
+<!--            android:layout_alignEnd="@+id/btnTop"-->
+<!--            android:layout_alignBottom="@+id/btnTop"-->
+<!--            android:layout_marginStart="13dp"-->
+<!--            android:layout_marginTop="13dp"-->
+<!--            android:layout_marginEnd="13dp"-->
+<!--            android:layout_marginBottom="13dp"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:gravity="center_horizontal|top"-->
+<!--            android:lineSpacingExtra="0sp"-->
+<!--            android:text="@string/top_title"-->
+<!--            android:textAppearance="@style/text"-->
+<!--            android:textColor="#0094FF"-->
+<!--            android:textSize="14sp" />-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/relativeLayoutFavorite"-->
+<!--        android:layout_width="155dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginEnd="20dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btnFavorite"-->
+<!--            android:layout_width="155dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:scaleType="matrix"-->
+<!--            android:src="@drawable/blue" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textFavorite"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="14dp"-->
+<!--            android:layout_alignStart="@+id/btnFavorite"-->
+<!--            android:layout_alignTop="@+id/btnFavorite"-->
+<!--            android:layout_alignEnd="@+id/btnFavorite"-->
+<!--            android:layout_alignBottom="@+id/btnFavorite"-->
+<!--            android:layout_marginStart="13dp"-->
+<!--            android:layout_marginTop="13dp"-->
+<!--            android:layout_marginEnd="13dp"-->
+<!--            android:layout_marginBottom="13dp"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:gravity="center_horizontal|top"-->
+<!--            android:lineSpacingExtra="0sp"-->
+<!--            android:text="@string/favorite_title"-->
+<!--            android:textAppearance="@style/text"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="14sp" />-->
+
+<!--    </RelativeLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

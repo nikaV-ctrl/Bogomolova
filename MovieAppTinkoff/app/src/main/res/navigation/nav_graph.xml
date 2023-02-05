@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragmentNav">
+
+    <fragment
+        android:id="@+id/mainFragmentNav"
+        android:name="com.example.movieapptinkoff.screens.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment2_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_mainFragment2_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainFragmentNav_self"
+            app:destination="@id/mainFragmentNav" />
+        <action
+            android:id="@+id/action_mainFragmentNav_to_singleMovieFragment"
+            app:destination="@id/singleMovieFragment" />
+        <action
+            android:id="@+id/action_mainFragmentNav_to_lostConnectionFragment"
+            app:destination="@id/lostConnectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.movieapptinkoff.screens.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_mainFragment2"
+            app:destination="@id/mainFragmentNav" />
+        <action
+            android:id="@+id/action_favoriteFragment_self"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_singleMovieFragment"
+            app:destination="@id/singleMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.movieapptinkoff.screens.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_mainFragment2"
+            app:destination="@id/mainFragmentNav" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleMovieFragment"
+        android:name="com.example.movieapptinkoff.screens.detail.SingleMovieFragment"
+        android:label="fragment_single_movie"
+        tools:layout="@layout/fragment_single_movie" />
+    <fragment
+        android:id="@+id/lostConnectionFragment"
+        android:name="com.example.movieapptinkoff.screens.LostConnectionFragment"
+        android:label="fragment_lost_connection"
+        tools:layout="@layout/fragment_lost_connection" >
+        <action
+            android:id="@+id/action_lostConnectionFragment_to_mainFragmentNav"
+            app:destination="@id/mainFragmentNav" />
+    </fragment>
+</navigation>

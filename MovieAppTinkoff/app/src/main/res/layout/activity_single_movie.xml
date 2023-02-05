@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.detail.SingleMovie">
+
+    <RelativeLayout
+        android:id="@+id/some_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/some_id"
+        android:clipToOutline="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/vector"
+            android:layout_width="15.58dp"
+            android:layout_height="15.19dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="57.41dp"
+            android:src="@drawable/vector" />
+
+        <ImageView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="533dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="-24dp"
+            android:background="@drawable/banner" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="540dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="top"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="-7sp"
+            android:text="@string/title"
+            android:textAppearance="@style/title"
+            app:lineHeight="18sp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="585dp"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/description"
+            android:textAppearance="@style/description" />
+
+        <TextView
+            android:id="@+id/genres"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="692dp"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/genres"
+            android:textAppearance="@style/genres" />
+
+        <TextView
+            android:id="@+id/countries"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="716dp"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/countries"
+            android:textAppearance="@style/countries" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="740dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/year"
+            android:textAppearance="@style/year" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+

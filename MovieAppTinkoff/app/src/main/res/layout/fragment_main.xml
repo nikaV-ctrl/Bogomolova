@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.main.MainFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/some_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/some_id"
+            android:clipToOutline="true">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="33dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="top"
+                android:lineSpacingExtra="-13sp"
+                android:text="@string/top_title"
+                android:textAppearance="@style/main_title" />
+
+            <ImageView
+                android:id="@+id/vector"
+                android:layout_width="17.6dp"
+                android:layout_height="17.58dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="155dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginRight="22.4dp"
+                android:layout_toEndOf="@+id/title"
+                android:src="@drawable/search" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movieList"
+                android:layout_width="wrap_content"
+                android:layout_height="555dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="94dp"
+                android:layout_marginRight="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="158dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="676dp"
+        >
+
+        <ImageView
+            android:id="@+id/btnTop"
+            android:layout_width="158dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/light_blue" />
+
+        <TextView
+            android:id="@+id/textTop"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignStart="@+id/btnTop"
+            android:layout_alignTop="@+id/btnTop"
+            android:layout_alignEnd="@+id/btnTop"
+            android:layout_alignBottom="@+id/btnTop"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal|top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/top_title"
+            android:textAppearance="@style/text"
+            android:textColor="#0094FF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutFavorite"
+        android:layout_width="155dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="676dp">
+
+        <ImageView
+            android:id="@+id/btnFavorite"
+            android:layout_width="155dp"
+            android:layout_height="45dp"
+            android:scaleType="matrix"
+            android:src="@drawable/blue" />
+
+        <TextView
+            android:id="@+id/textFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_alignStart="@+id/btnFavorite"
+            android:layout_alignTop="@+id/btnFavorite"
+            android:layout_alignEnd="@+id/btnFavorite"
+            android:layout_alignBottom="@+id/btnFavorite"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_horizontal|top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/favorite_title"
+            android:textAppearance="@style/text"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
