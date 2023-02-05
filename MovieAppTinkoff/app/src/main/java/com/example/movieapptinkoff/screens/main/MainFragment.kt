@@ -75,13 +75,11 @@ class MainFragment : Fragment() {
 
         fun clickMovie(model: Film){
             val bundle = Bundle()
-            lateinit var modelGenre: Genre
 //            bundle.putSerializable("movie", model as Serializable)
             bundle.putInt("filmId", model.filmId)
             bundle.putString("posterUrl", model.posterUrl)
             bundle.putString("nameRu", model.nameRu)
-            bundle.putString("genres", modelGenre.genre)
-
+            bundle.putString("genres", model.genres.toString())
             bundle.putString("countries", model.countries.toString())
             bundle.putString("year", model.year)
 

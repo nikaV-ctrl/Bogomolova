@@ -44,10 +44,14 @@ class DetailFragment : Fragment() {
             .into(binding.banner)
 
         binding.name.text = arguments?.getString("nameRu")
-//        var genres = arguments?.getString("genres")
-//        var countries = arguments?.getString("countries")
-        binding.genres.text = arguments?.getString("genres")
-        binding.countries.text = arguments?.getString("countries")
+        var genres: String = arguments?.getString("genres").toString()
+        val charsToRemove = "[]()=Ggenre"
+        charsToRemove.forEach { genres = genres.replace(it.toString(), "") }
+        var countries: String = arguments?.getString("countries").toString()
+        val charsToRemoveCountry = "[]()=Ccountry"
+        charsToRemoveCountry.forEach { countries = countries.replace(it.toString(), "") }
+        binding.genres.text = genres.capitalize()
+        binding.countries.text = countries.capitalize()
         binding.year.text = arguments?.getString("year")
     }
 
